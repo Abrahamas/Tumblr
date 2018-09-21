@@ -4,11 +4,12 @@
 //
 //  Created by Mac on 6/24/1397 AP.
 //
-import AlamofireImage
-import UIKit
 
+import UIKit
+import AlamofireImage
 class PhotosViewControllers: UIViewController ,UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tvPhoto: UITableView!
+    var urlString = ""
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
     }
@@ -24,7 +25,7 @@ class PhotosViewControllers: UIViewController ,UITableViewDataSource, UITableVie
             // 2.
             let originalSize = photo["original_size"] as! [String: Any]
             // 3.
-            let urlString = originalSize["url"] as! String
+                urlString = originalSize["url"] as! String
             // 4.
             let url = URL(string: urlString)
             // TODO: Get the photo url
@@ -38,6 +39,7 @@ class PhotosViewControllers: UIViewController ,UITableViewDataSource, UITableVie
     var posts: [[String: Any]] = []
 
     override func viewDidLoad() {
+//        imageView.image = image
         super.viewDidLoad()
         tvPhoto.delegate = self
         tvPhoto.dataSource = self
@@ -68,21 +70,27 @@ class PhotosViewControllers: UIViewController ,UITableViewDataSource, UITableVie
         }
         task.resume()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cell = sender as! UITableViewCell
+        let vc = segue.destination as! PhotoDetailsViewController
+        if let indexpath = tvPhoto.indexPath(for: cell){
+            var post = posts[indexpath.row]
+            if let photos = post["photos"] as? [[String: Any]]{
+                let photo = photos[0]
+                let originalSize = photo["original_size"] as! [String: Any]
+                urlString = originalSize["url"] as! String
+                vc.imageURlS = urlString
+            }
+        }
+            
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

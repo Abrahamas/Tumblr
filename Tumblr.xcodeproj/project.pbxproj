@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		04088F28214DA4D2003CA581 /* PhotosViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04088F27214DA4D2003CA581 /* PhotosViewControllers.swift */; };
 		04088F2A214DA5F7003CA581 /* PhotoCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04088F29214DA5F7003CA581 /* PhotoCellTableViewCell.swift */; };
+		04088F6A214F23F9003CA581 /* PhotoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04088F69214F23F9003CA581 /* PhotoDetailsViewController.swift */; };
 		041A90D9214D97380055329B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A90D8214D97380055329B /* AppDelegate.swift */; };
 		041A90DE214D97380055329B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 041A90DC214D97380055329B /* Main.storyboard */; };
 		041A90E0214D97390055329B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 041A90DF214D97390055329B /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		04088F27214DA4D2003CA581 /* PhotosViewControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewControllers.swift; sourceTree = SOURCE_ROOT; };
 		04088F29214DA5F7003CA581 /* PhotoCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCellTableViewCell.swift; sourceTree = "<group>"; };
+		04088F69214F23F9003CA581 /* PhotoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsViewController.swift; sourceTree = "<group>"; };
 		041A90D5214D97380055329B /* Tumblr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tumblr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		041A90D8214D97380055329B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		041A90DD214D97380055329B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			children = (
 				04088F27214DA4D2003CA581 /* PhotosViewControllers.swift */,
 				04088F29214DA5F7003CA581 /* PhotoCellTableViewCell.swift */,
+				04088F69214F23F9003CA581 /* PhotoDetailsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04088F6A214F23F9003CA581 /* PhotoDetailsViewController.swift in Sources */,
 				041A90D9214D97380055329B /* AppDelegate.swift in Sources */,
 				04088F2A214DA5F7003CA581 /* PhotoCellTableViewCell.swift in Sources */,
 				04088F28214DA4D2003CA581 /* PhotosViewControllers.swift in Sources */,
