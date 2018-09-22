@@ -83,7 +83,7 @@ class PhotosViewControllers: UIViewController ,UITableViewDataSource, UITableVie
                 vc.imageURlS = urlString
             }
         }
-            
+        
     }
     
 
